@@ -3,7 +3,7 @@
 
         public function User()
         {
-            $this->view('Login',[]);
+            $this->view('HomeView',[]);
         }
         public function checkLogin() {
 

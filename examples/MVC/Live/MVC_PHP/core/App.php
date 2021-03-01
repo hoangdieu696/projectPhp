@@ -15,7 +15,6 @@
                      }
                }
                require_once("./MVC_PHP/Controller/".$this->controller.".php");
-               echo $this->controller." ";
                 $this->controller = new $this->controller;
                 // action
                 if(isset($arr[1])) {
@@ -26,7 +25,6 @@
                     unset($arr[1]) ;
                 }
                 $this->params = $arr?array_values($arr):[];
-                echo  $this->action ;
                 call_user_func_array([$this->controller,$this->action],$this->params);
             }
 
